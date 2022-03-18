@@ -1,0 +1,61 @@
+<center>
+  <style>
+    * {
+      font-family: consolas;
+      padding: 0;
+      margin: 0;
+      border-radius: 10px;
+    }
+    h2 {
+      padding: 10px;
+    }
+    #box {
+      width: 600px;
+      padding: 30px;
+      background-color: lightsteelblue;
+      border: 1px steelblue solid;
+    }
+    p {
+      font-size: 22px;
+      padding-top: 10px;
+      margin-botton: 5px;
+    }
+    input {
+      background-color: whitesmoke;
+      border: 1px steelblue solid;
+      width: 100%;
+      padding: 10px;
+    }
+    input:hover {
+      background-color: white;
+      border: 1px black solid;
+    }
+    button {
+      border: 1px steelblue solid;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 24px;
+    }
+    button:hover {
+      background-color: white;
+      border: 1px black solid;
+    }
+  </style>
+  <div id="box">
+    <h2>Tokhun Asset Peeper - Peep That Asset</h2>
+    <p>Policy ID</p>
+    <input id='policyID' type="text"></input>
+    <p>Asset Name</p>
+    <input id='assetName' type="text"></input>
+    <button class="btn" type="button" onclick='redirect();'>Open</button>
+  </div>
+  <script>
+    let host = "https://tokhun.io/explore/";
+    function redirect() {
+      let policyID = document.getElementById("policyID").value;
+      let assetName = document.getElementById("assetName").value;
+      let URL = host + policyID + "." + assetName;
+      window.open(URL);
+    }
+  </script>
+</center>
